@@ -1,0 +1,34 @@
+<hr>
+<p>Page 1 (other-component works)!</p>
+<hr>
+<div class="m-3">
+    <c-tabs [activeItemKey]="0">
+        <c-tabs-list variant="tabs">
+            <button cTab [itemKey]="0">Tab1</button>
+            <button cTab [itemKey]="1">Tab2</button>
+        </c-tabs-list>
+        <c-tabs-content>
+            <c-tab-panel class="p-3" [itemKey]="0">
+                <c-tabs [activeItemKey]="0">
+                    <c-tabs-list variant="pills">
+                        <button cTab [itemKey]="0">Home</button>
+                        <button cTab [itemKey]="1">Profile</button>
+                    </c-tabs-list>
+                    <c-tabs-content>
+                        <c-tab-panel class="p-3" [itemKey]="0">
+                            <strong>Home</strong> tab content
+                        </c-tab-panel>
+                        <c-tab-panel class="p-3" [itemKey]="1">
+                            <strong>Profile</strong> tab content
+                        </c-tab-panel>
+                    </c-tabs-content>
+                </c-tabs>
+            </c-tab-panel>
+            <c-tab-panel class="p-3" [itemKey]="1">
+                <strong>Profile</strong> tab content
+            </c-tab-panel>
+        </c-tabs-content>
+    </c-tabs>
+
+    <hr />
+</div>
